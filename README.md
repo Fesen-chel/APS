@@ -35,3 +35,6 @@
 
 ## Диагармма последовательностей (Sequence)
 ![sequence_diagram.png](https://github.com/Fesen-chel/APS/blob/main/sequence_diagram.png)
+
+## BPMN-диаграмма
+![bpmn_diagram.png](https://github.com/Fesen-chel/APS/blob/main/bpmn_diagram.png)
