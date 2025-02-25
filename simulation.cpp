@@ -123,7 +123,7 @@ bool is_simulation_complete(const Buffer &buffer, const std::vector<Expert> &exp
 }
 
 void print_status(const Buffer &buffer, const std::vector<Expert> &experts) {
-  std::cout << "Buffer: [";
+  std::cout << "Buffer: [ ";
   for (size_t i = 0; i < buffer.get_capacity(); ++i) {
     if (buffer.get_requests()[i] != nullptr) {
       std::cout << buffer.get_requests()[i]->get_id() << " ";
@@ -171,20 +171,18 @@ void run_simulation(bool step_by_step) {
       requestId++;
     }
 
+    selection_dispatcher.select_request();
+    selection_dispatcher.assign_request_to_device(current_time, completed_requests);
+
     for (auto &expert : experts) {
       expert.complete_request(current_time);
-    }
-
-    std::shared_ptr<Request> buffer_request = selection_dispatcher.select_request();
-    if (buffer_request != nullptr) {
-      selection_dispatcher.assign_request_to_device(buffer_request, current_time, completed_requests);
     }
 
     if (step_by_step) {
       std::cout << "\n=== Step ===\n";
       print_status(buffer, experts);
       std::cout << "Current time: " << current_time << "\n";
-      //std::this_thread::sleep_for(std::chrono::milliseconds(100));
+      std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
     current_time += random_uniform(MIN_INTERARRIVAL_TIME, MAX_INTERARRIVAL_TIME);
