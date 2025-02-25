@@ -31,10 +31,10 @@
 6.	Прибор – специалист-оценщик, который выносит вердикт по заявке
 
 ## Диаграма классов
-![classes_diagram.png](https://github.com/Fesen-chel/APS/blob/main/classes_diagram.png)
+![classes_diagram.png](https://github.com/Fesen-chel/APS/blob/main/Artifacts/classes_diagram.png)
 
 ## Диагармма последовательностей (Sequence)
-![sequence_diagram.png](https://github.com/Fesen-chel/APS/blob/main/sequence_diagram.png)
+![sequence_diagram.png](https://github.com/Fesen-chel/APS/blob/main/Artifacts/sequence_diagram.png)
 
 ## BPMN-диаграмма
-![bpmn_diagram.png](https://github.com/Fesen-chel/APS/blob/main/bpmn_diagram.png)
+![bpmn_diagram.png](https://github.com/Fesen-chel/APS/blob/main/Artifacts/bpmn_diagram.png)
