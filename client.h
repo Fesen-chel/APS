@@ -6,6 +6,7 @@
 class Client {
   private:
   int id;
+  double next_request_time;
 
   public:
   Client(int id);

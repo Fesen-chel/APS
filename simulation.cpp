@@ -185,7 +185,7 @@ void run_simulation(bool step_by_step) {
       std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
-    current_time += random_uniform(MIN_INTERARRIVAL_TIME, MAX_INTERARRIVAL_TIME);
+    current_time += 0.1;
   }
 
   calculate_statistics(completed_requests, experts, current_time);

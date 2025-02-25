@@ -5,7 +5,7 @@
 
 const int NUM_CLIENTS = 10;
 const int NUM_DEVICES = 3;
-const int BUFFER_SIZE = 10;
+const int BUFFER_SIZE = 5;
 const int TOTAL_REQUESTS = 100;
 const double LYAMBDA = 1;
 const double MIN_INTERARRIVAL_TIME = 0.1;

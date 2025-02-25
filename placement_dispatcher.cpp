@@ -4,6 +4,9 @@
 PlacementDispatcher::PlacementDispatcher(Buffer &buf) : buffer(buf) {}
 
 void PlacementDispatcher::place_request(std::shared_ptr<Request> request, std::vector<std::shared_ptr<Request>> &completed_requests) {
+  if (request == nullptr) {
+    return;
+  }
   if (!buffer.add_request(request)) {
     size_t last_index = buffer.get_last_added();
     std::shared_ptr<Request> rejected_request = buffer.remove_request(last_index);
